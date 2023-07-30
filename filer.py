@@ -1,4 +1,5 @@
 import os
+import time
 import directory_tree
 from rich import print
 from rich.prompt import Prompt
@@ -8,14 +9,15 @@ from panel import displayMenu
 from config import *
 from efd import listEncryptedFiles
 from sounds import *
-import time
 
 
 
-def clearScreen():
-    if (os.name == "nt"):
+
+def clear_screen():
+    """Function used for removing all text in the terminal"""
+    if os.name == "nt":
         os.system("cls")
-    elif (os.name == "posix"):
+    elif os.name == "posix":
         os.system("clear")
     else:
         print("\nUnknown operating system. Please run this script on a Windows or Linux machine.")
@@ -23,14 +25,21 @@ def clearScreen():
 
 
 
-
-
 def main():
+    """File encryption and decryption application.
+
+    Usage:
+        1. Run the script and enter a valid file path or leave it blank to use the current directory.
+        2. Choose an option from the menu:
+            - 1: Encrypt a file.
+            - 2: Decrypt a previously encrypted file.
+            - 3: View the directory tree of the specified path.
+            - 4: List all encrypted files in the system.
+            - 5: Exit the application.
+    """
     create_config_directory()
     create_config_file()
-     
-    displayText = """                                                                                                                                             
-                                                                       
+    display_text = """                                                                   
  █████   ████                                 █████                    
 ░░███   ███░                                 ░░███                     
  ░███  ███    ████████  █████ ████ ████████  ███████    ██████   █████ 
@@ -52,7 +61,7 @@ def main():
 ░░░░░       ░░░░░ ░░░░░  ░░░░░░  ░░░░░                                 
                                                                                                                                                        
                                                                        """
-    print(f"[green]{displayText}[/green]")
+    print(f"[green]{display_text}[/green]")
     print("\n")
     path = Prompt.ask("[cyan] Enter Path")
     try:
@@ -64,7 +73,7 @@ def main():
                 error()
                 time.sleep(2)
                 return
-        else: 
+        else:
             path = os.getcwd()
     except:
         print( print("[bright_red] Invalid Path!\n"))
@@ -97,15 +106,7 @@ def main():
         else:
             print("\n[bright_red bold] Invalid Choice! [/]")
             error()
-            clearScreen()
+            clear_screen()
             displayMenu(path)
 
-     
-                                                                                                                                                       
-                                                                                                           
-                                                                                                           
-main()                                                                                                      
-                                                                                                        
-                                                                 
-                                                                                                                                                                                               
-                                                                                                                                  
+main()
