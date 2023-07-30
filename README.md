@@ -65,7 +65,7 @@ python3 filer.py
         <br>
         <li>Choose the action needed to be performed from the main menu</li>
         <br>
-        <img width="1188" alt="MainMenu" src="https://github.com/Karthikrajatp/KryptosFiler/assets/78692527/0e251ad1-e89b-4084-bab7-f1e474f4afb2">
+        <img width="1188" alt="MainMenu" src="https://github.com/Karthikrajatp/KryptosFiler/blob/main/Mainmenu.png">
         <br>
         <li>Follow the sequences as mentioned in the tool after choosing an action.</li>
 </ul>
