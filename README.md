@@ -5,7 +5,7 @@
 ## Languages and Libraries Used 🔨
 <ul>
        <b> 
-               <li>Python</li>
+               <li><a href="https://www.python.org/" target="_blank">Python</a></li>
                <li><a href="https://rich.readthedocs.io/en/stable/introduction.html" target="_blank">Rich</a></li>
                <li><a href="https://cryptography.io/en/latest/" target="_blank">Cryptography</a></li>
                <li><a href="https://simpleaudio.readthedocs.io/en/latest/" target="_blank">simpleaudio</a></li>
